@@ -1,21 +1,11 @@
-import { useState } from "react";
-import { Route, Routes } from "react-router-dom";
-import Home from "./components/Home";
-import Product from "./components/Product";
-import Service from "./components/Service";
-import About from "./components/About";
 import Nav from "./components/Nav";
+import Mainroutes from "./routes/Mainroutes";
 
 function App() {
   return (
-    <div className="w-screen h-screen bg-gray-800 text-white">
+    <div className="w-screen h-screen bg-gray-800 text-white px-[10%]">
       <Nav />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/product" element={<Product />} />
-        <Route path="/service" element={<Service />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
+      <Mainroutes />
     </div>
   );
 }
